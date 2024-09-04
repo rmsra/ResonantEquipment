@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resonant Equipment Private Limited</title>
+    <style>
+        body, html {
+            font-family: 'Gotham', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: #8B0000;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            height: 50px;
+            width: auto;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ddd;
+        }
+        main {
+            padding-top: 80px;
+        }
+        h1, h2 {
+            color: #8B0000;
+        }
+        .section {
+            margin: 4rem 0;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .highlight {
+            background-color: #f0f0f0;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .product:hover {
+            transform: translateY(-5px);
+        }
+        .testimonial {
+            font-style: italic;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #8B0000;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #6d0000;
+        }
+    </style>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("wlvaZUhVQdbQUyjSr"); // Replace with your EmailJS User ID
+        })();
+
+        function sendEmail(e) {
+            e.preventDefault();
+
+            emailjs.sendForm('service_uzlea1t', 'template_8196cjc', '#contact-form')
+                .then(function(response) {
+                    alert('Email sent successfully!');
+                }, function(error) {
+                    alert('Failed to send email. Please try again later.');
+                });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container logo-container">
+            <img src="./logo.png" alt="Resonant Equipment Logo" class="logo" width="150" height="80">
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="about" class="section">
+            <h2>About Us</h2>
+            <p>Resonant Equipment Private Limited, established in 2023, is at the forefront of high voltage transformer manufacturing in Bikaner, Rajasthan. Our cutting-edge facility is designed to meet the growing demands of India's renewable energy sector.</p>
+            <div class="highlight">
+                <h3>Our Vision</h3>
+                <p>To become a global leader in Transformer Manufacturing, specializing in transformers up to 220 kV, and to secure a prominent position in the industry within the next five years.</p>
+            </div>
+            <div class="highlight">
+                <h3>Our Mission</h3>
+                <p>To establish a self-reliant manufacturing facility producing high-quality Distribution/Power Transformers, focusing on meeting local demand, particularly within the Indian renewable market and Railways sector.</p>
+            </div>
+        </div>
+
+        <div id="products" class="section">
+            <h2>Our Products</h2>
+            <div class="products">
+                <div class="product">
+                    <h3>Power Transformers</h3>
+                    <p>High-capacity transformers for power transmission networks.</p>
+                </div>
+                <div class="product">
+                    <h3>Distribution Transformers</h3>
+                    <p>Efficient transformers for distributing electricity to end-users.</p>
+                </div>
+                <div class="product">
+                    <h3>Furnace Transformers</h3>
+                    <p>Specialized transformers for industrial furnace applications.</p>
+                </div>
+                <div class="product">
+                    <h3>Traction Transformers</h3>
+                    <p>Robust transformers designed for railway electrification systems.</p>
+                </div>
+                <div class="product">
+                    <h3>Inverter Duty Transformers</h3>
+                    <p>Transformers optimized for renewable energy systems.</p>
+                </div>
+                <div class="product">
+                    <h3>Compact Substations</h3>
+                    <p>Space-efficient substation solutions for urban and industrial areas.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="testimonials" class="section">
+            <h2>Testimonials</h2>
+            <div class="testimonial">
+                <p>"Resonant Equipment's transformers have significantly improved the efficiency of our solar power plant. Their commitment to quality is unmatched."</p>
+                <p>- Solar Energy Solutions Ltd.</p>
+            </div>
+            <div class="testimonial">
+                <p>"We've been impressed by the reliability and performance of Resonant's traction transformers in our railway electrification project."</p>
+                <p>- Indian Railways Electrification Division</p>
+            </div>
+        </div>
+
+        <div id="contact" class="section">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p><strong>Registered Address:</strong> Karni Mata Mandir Ke Piche, Tilak Nagar, Bikaner – 334001, Rajasthan</p>
+                <p><strong>Factory Address:</strong> Survey No: 481, Village Gajner Kolayat Tehsil, Bikaner – 334302, Rajasthan</p>
+                <p><strong>Email:</strong> info@resonantequipment.com</p>
+                <p><strong>Phone:</strong> +91 1234567890</p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://maps.google.com/maps?q=Karni%20Mata%20Mandir%20Ke%20Piche,%20Tilak%20Nagar,%20Bikaner%20%E2%80%93%20334001,%20Rajasthan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+            <form id="contact-form" onsubmit="sendEmail(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea><br>
+        
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Resonant Equipment Private Limited. All rights reserved.</p>
+    </footer>
+</body>
+</html>
